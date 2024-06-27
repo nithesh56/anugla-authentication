@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <span class="logo">MyApp</span>
+  <span class="spacer"></span>
+  <button mat-icon-button class="header-icon">
+    <mat-icon>notifications</mat-icon>
+    <span class="notification-count">3</span>
+  </button>
+  <button mat-icon-button class="header-icon" (click)="toggleTheme()">
+    <mat-icon>brightness_6</mat-icon>
+  </button>
+  <span class="user-profile">User Profile</span>
+  <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+</mat-toolbar>

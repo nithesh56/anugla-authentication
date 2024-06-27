@@ -1,0 +1,15 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header></app-header>
+    <div class="main-content">
+      <div class="language-switch">
+        <button mat-button (click)="switchLanguage('en')">{{ 'APP.LANGUAGE.ENGLISH' | translate }}</button>
+        <button mat-button (click)="switchLanguage('ta')">{{ 'APP.LANGUAGE.TAMIL' | translate }}</button>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+   </mat-sidenav-content>
+</mat-sidenav-container>

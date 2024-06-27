@@ -1,0 +1,38 @@
+{
+    "APP": {
+      "TITLE": "Application Title",
+      "MENU": {
+        "HOME": "Home",
+        "PRODUCTS": "Products",
+        "ORDERS": "Orders",
+        "ADD_PRODUCT": "Add Product",
+        "PRODUCT_LIST": "Product List",
+        "ADD_ORDER": "Add Order",
+        "ORDER_LIST": "Order List"
+      },
+      "PRODUCT": {
+        "TITLE": "Product List",
+        "ID": "Product ID",
+        "NAME": "Product Name",
+        "PRICE": "Price",
+        "QUANTITY": "Quantity",
+        "ADD": "Add Product",
+        "UPDATE": "Update Product"
+      },
+      "ORDER": {
+        "TITLE": "Order List",
+        "ID": "Order ID",
+        "DATE": "Date",
+        "TOTAL_PRICE": "Total Price",
+        "ACTIONS": "Actions",
+        "ADD": "Add Order",
+        "UPDATE": "Update Order"
+      },
+      "ACTIONS": "Actions",
+      "LANGUAGE": {
+        "ENGLISH": "English",
+        "TAMIL": "தமிழ்"
+      }
+    }
+  }
+  

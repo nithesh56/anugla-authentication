@@ -1,0 +1,52 @@
+<div class="order-form-container">
+  <mat-card class="form-card">
+    <mat-card-header>
+      <mat-card-title>{{ isEditMode ? 'Edit Order' : 'Add Order' }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+        <div class="form-grid">
+          <mat-form-field appearance="fill">
+            <mat-label>Order ID</mat-label>
+            <input matInput formControlName="id" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div formArrayName="items" class="items-container">
+          <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item-row">
+            <div class="form-grid">
+              <mat-form-field appearance="fill">
+                <mat-label>Product</mat-label>
+                <mat-select formControlName="productId" required>
+                  <mat-option *ngFor="let product of products" [value]="product.id">
+                    {{ product.name }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Quantity</mat-label>
+                <input matInput formControlName="quantity" required>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Price</mat-label>
+                <input matInput formControlName="price" required>
+              </mat-form-field>
+              <button mat-raised-button color="warn" type="button" (click)="removeItem(i)">Remove Item</button>
+            </div>
+           
+          </div>
+        </div>
+        <button mat-raised-button color="primary" type="button" (click)="addItem()">Add Item</button>
+        <div class="total-price">
+          Total Price: {{ getTotalPrice() | currency }}
+        </div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="orderForm.invalid">{{ isEditMode ? 'Update' : 'Add' }} Order</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,47 @@
+.mat-nav-list .mat-list-item {
+  padding: 4px 8px; // Reduced padding for a more compact layout
+  line-height: 24px; // Reduced line height for a more compact layout
+}
+
+.mat-nav-list .mat-list-item .mat-button {
+  min-width: 0;
+  padding: 4px 8px; // Reduced padding for a more compact layout
+}
+
+.mat-nav-list .mat-list-item .submenu-item {
+  padding-left: 20px; // Indentation for sub-menu items
+}
+
+.mat-nav-list .mat-list-item .submenu-item .mat-button {
+  padding: 2px 8px; // Reduced padding for a more compact layout
+  line-height: 22px; // Reduced line height for a more compact layout
+}
+
+.mat-expansion-panel-header {
+  padding: 0 8px; // Reduced padding for a more compact layout
+}
+
+.single-link {
+  background-color: white; // Ensure single link has a white background
+  padding: 4px 8px; // Padding for single link
+  margin: 0; // Remove margin
+}
+
+.single-link:hover,
+.mat-nav-list .mat-list-item:hover,
+.mat-nav-list .mat-list-item .submenu-item .mat-button:hover,
+.mat-nav-list .mat-list-item .mat-button:hover,
+.mat-nav-list a:hover {
+  background-color: rgba(0, 0, 0, 0.04); // Matching hover color for both single and multi-links
+}
+
+.mat-list-item a {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.mat-icon {
+  margin-right: 8px; // Adding some space between the icon and the text
+}
